@@ -1,10 +1,10 @@
 <?php
 
-namespace Underpin_Exporters\Factories;
+namespace Underpin\Exporters\Factories;
 
 
 use Underpin\Traits\Instance_Setter;
-use Underpin_Exporters\Abstracts\Exporter;
+use Underpin\Exporters\Abstracts\Exporter;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
