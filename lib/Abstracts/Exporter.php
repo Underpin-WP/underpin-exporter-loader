@@ -7,10 +7,11 @@
  */
 
 
-namespace Underpin_Exporters\Abstracts;
+namespace Underpin\Exporters\Abstracts;
 
+use Underpin\Loaders\Logger;
 use Underpin\Traits\Feature_Extension;
-use function Underpin\underpin;
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -48,7 +49,7 @@ abstract class Exporter {
 	public function do_actions() {
 		add_filter( 'wp_privacy_personal_data_exporters', [ $this, 'register_exporter' ] );
 
-		underpin()->logger()->log(
+		Logger::log(
 			'notice',
 			'eraser_added',
 			'An eraser has been added',
