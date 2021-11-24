@@ -8,6 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Add this loader.
 Underpin::attach( 'setup', new \Underpin\Factories\Observers\Loader( 'exporters', [
-	'instance' => 'Underpin\Exporters\Abstracts\Exporter',
-	'default'  => 'Underpin\Exporters\Factories\Exporter_Instance',
+	'abstraction_class' => 'Underpin\Exporters\Abstracts\Exporter',
+	'default_factory'  => 'Underpin\Exporters\Factories\Exporter_Instance',
 ] ) );
